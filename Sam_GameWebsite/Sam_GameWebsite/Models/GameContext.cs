@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using Sam_GameWebsite.Models;
 
 namespace Sam_GameWebsite.Models
 {
@@ -19,8 +20,8 @@ namespace Sam_GameWebsite.Models
         {
         }
 
-        public System.Data.Entity.DbSet<Sam_GameWebsite.Models.Game> Games { get; set; }
+        public System.Data.Entity.DbSet<Game> Games { get; set; }
 
-        public System.Data.Entity.DbSet<Sam_GameWebsite.Models.Genre> Genres { get; set; }
+        public System.Data.Entity.DbSet<Genre> Genres { get; set; }
     }
 }
