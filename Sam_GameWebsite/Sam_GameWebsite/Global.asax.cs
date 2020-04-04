@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Data.Entity;
+using Sam_GameWebsite.Models;
 
 namespace Sam_GameWebsite
 {
@@ -12,6 +14,7 @@ namespace Sam_GameWebsite
     {
         protected void Application_Start()
         {
+            Database.SetInitializer(new GameDataInitialiser());
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
